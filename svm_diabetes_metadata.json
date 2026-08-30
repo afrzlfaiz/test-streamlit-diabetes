@@ -1,0 +1,64 @@
+{
+  "target": "diabetes_risk",
+  "excluded_columns": [
+    "patient_id"
+  ],
+  "input_features": [
+    "age",
+    "gender",
+    "city",
+    "bmi",
+    "family_history_diabetes",
+    "physical_activity_level",
+    "diet_type",
+    "smoking_status",
+    "alcohol_consumption",
+    "hours_sleep_per_night",
+    "stress_level",
+    "fasting_blood_sugar",
+    "hba1c_level",
+    "blood_pressure_systolic",
+    "blood_pressure_diastolic",
+    "waist_circumference_cm",
+    "income_bracket"
+  ],
+  "numeric_features": [
+    "age",
+    "bmi",
+    "hours_sleep_per_night",
+    "stress_level",
+    "fasting_blood_sugar",
+    "hba1c_level",
+    "blood_pressure_systolic",
+    "blood_pressure_diastolic",
+    "waist_circumference_cm"
+  ],
+  "categorical_features": [
+    "gender",
+    "city",
+    "family_history_diabetes",
+    "physical_activity_level",
+    "diet_type",
+    "smoking_status",
+    "alcohol_consumption",
+    "income_bracket"
+  ],
+  "classes": [
+    "High",
+    "Low",
+    "Moderate"
+  ],
+  "train_rows": 12000,
+  "test_rows": 3000,
+  "grid_scoring": "f1_macro",
+  "cv": 3,
+  "best_params": {
+    "svm__C": 0.1,
+    "svm__class_weight": null,
+    "svm__kernel": "linear"
+  },
+  "best_cv_macro_f1": 0.7424890758650019,
+  "test_accuracy": 0.794,
+  "test_macro_f1": 0.7447415565897977,
+  "test_weighted_f1": 0.7912884447145649
+}
